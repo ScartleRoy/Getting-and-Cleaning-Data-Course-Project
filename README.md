@@ -7,7 +7,7 @@ run_analysis.R is the R code that performs the required actions in the project.
 
 tidy_dataset.txt is the tidy dataset.
 
-codebook.md is the code book required.
+CODEBOOK FOR THE TIDY DATASET.docx is the code book required.
 
 ========================================
 
