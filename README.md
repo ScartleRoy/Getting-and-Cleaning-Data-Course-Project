@@ -11,11 +11,14 @@ codebook.md is the code book required.
 
 ========================================
 
-I’ve followed the steps given in the project requirement in the R code.
+I've followed the instructions listed in the requirement of the project. 
 
-You should put the code along with the files such as features.txt, activity_labels.txt, etc.
+First, we read the feature names and the activity names and use regular expression (grep function) to find out the measurements that only related to mean and standard deviation. 
 
-That is, you should place the code in the main directory of the dataset.
+Then we read the test and training files, use the selected measurement names above to subset those data into smaller pieces. 
 
-There are comments in the code so that I will not repeat them here. Please read the code comments directly.
- 
+Next we convert the activity numbers into activity names, then merge all of the subsets above into one dataset and assign the suitable column names for them. 
+
+And also we need to calculate the mean of each variable, so we use melt and dcast function in reshape2 library to create correspond tables for activity and subject. 
+
+Finally we combine those two tables and our final tidy dataset is created.
