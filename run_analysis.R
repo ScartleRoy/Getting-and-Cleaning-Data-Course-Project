@@ -98,4 +98,4 @@ tidy_data <- rbind(activity_mean, subject_mean)
 colnames(tidy_data)[1] <- "activity&subject"
 
 # Save the new tidy dataset
-write.table(tidy_data, file = "tidy.txt")
+write.table(tidy_data, file = "tidy_data.txt")
