@@ -5,7 +5,7 @@ This repo is for Coursera course Getting and Cleaning Data.
 
 run_analysis.R is the R code that performs the required actions in the project.
 
-tidy.txt is the tidy dataset.
+tidy_dataset.txt is the tidy dataset.
 
 codebook.md is the code book required.
 

@@ -4,7 +4,6 @@
 ## you should place it with the file features.txt, activity_labels.txt, etc.
 #########################################################################
 
-
 #########################################################################
 ## by Scartle Roy, 2014.7.16
 #########################################################################
@@ -23,7 +22,7 @@ feature <- read.table("features.txt")
 activity <- read.table("activity_labels.txt")
 
 # Find out the measurements about mean and std
-select_id <- grep("mean|std", feature$V2)
+select_id <- grep("mean\\(\\)|std\\(\\)", feature$V2)
 select_feature <- feature[feature$V1 %in% select_id,]
 
 # Read the test files
@@ -98,4 +97,4 @@ tidy_data <- rbind(activity_mean, subject_mean)
 colnames(tidy_data)[1] <- "activity&subject"
 
 # Save the new tidy dataset
-write.table(tidy_data, file = "tidy_data.txt")
+write.table(tidy_data, file = "tidy_dataset.txt")
