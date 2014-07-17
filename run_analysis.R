@@ -4,6 +4,7 @@
 ## you should place it with the file features.txt, activity_labels.txt, etc.
 #########################################################################
 
+
 #########################################################################
 ## by Scartle Roy, 2014.7.16
 #########################################################################
@@ -88,7 +89,7 @@ activity_mean <- activity_mean[,-length(activity_mean)]
 subject_group <- melt(total_data, id = c("activity", "subject"))
 subject_mean <- dcast(subject_group, subject ~ variable, mean)
 
-# Change a colomn name in order to merge the two data frames
+# Change a colomn's name and class in order to merge the two data frames
 colnames(subject_mean)[1] <- "activity"
 subject_mean$activity <-as.character(subject_mean$activity)
 
